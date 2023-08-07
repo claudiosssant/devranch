@@ -26,7 +26,7 @@ class RanchController {
       status
     });
 
-    return res.json(ranches);
+    return res.json(houses);
   };
 
   async update (req,res) {
