@@ -5,6 +5,8 @@ import uploadConfig from './config/upload';
 import SessionController from './controllers/SessionController';
 import RanchController from './controllers/RanchController';
 import DashboardController from './controllers/DashboardController';
+import ReserveController from './controllers/ReserveController';
+
 
 const routes = new Router();
 const upload = multer(uploadConfig);
@@ -17,6 +19,6 @@ routes.delete('/ranch', RanchController.destroy);
 
 routes.get('/dashboard', DashboardController.show);
 
-
+routes.post('/ranch/:ranch_id/reserve', ReserveController.store);
 
 export default routes;
